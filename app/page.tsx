@@ -1,101 +1,68 @@
 import Image from "next/image";
+import LogoImage from "@/public/logo.svg"
+import BackgroundImage from '@/public/Background.png'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex min-h-screen min-w-full">
+      <main className="flex min-h-screen min-w-full max-w-[1920px] flex-col px-[272px]">
+        {/* NAVBAR */}
+        <header 
+          className="flex items-center justify-between w-full py-[21px] max-h-[112px] border-b-2 border-black bg-transparent"
+        >
+          <div className="flex items-center gap-[106px]">
+          <a>
+            <Image src={LogoImage} alt="" className="max-w-[125px]" />
+          </a>
+          <ul className="flex gap-[16px]">
+            <li className="w-[100px] px-[16px] py-[10px] text-center bg-gray-100">Home</li>
+            <li className="w-[100px] px-[16px] py-[10px] text-center">Sobre</li>
+            <li className="w-[100px] px-[16px] py-[10px] text-center">Serviços</li>
+            <li className="w-[100px] px-[16px] py-[10px] text-center">Contato</li>
+          </ul>
+          </div>
+          <a className="w-[216px] px-[16px] py-[10px] text-center bg-white text-[#8E1730] ">Entre em contato</a>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* HOME */}
+        <section className="h-[776px]">
+          <Image 
+            className="absolute top-0 right-0 -z-10 max-h-[90vh] w-auto"
+            src={BackgroundImage}
+            alt=""
+          />
+
+          <div className="w-[680px] flex flex-col h-full justify-center">
+            <h1 className="text-[52px] leading-[62.4px] mb-[24px]">
+              Soluções Jurídicas e Estratégicas com <br />Tradição e Excelência
+            </h1>
+            <span className="w-[537px] text-[18px] font-normal leading-[28.8px] mb-[40px]">
+              Com mais de 30 anos de experiência, unimos conhecimento técnico e visão multidisciplinar para oferecer assessoria jurídica personalizada em diversas áreas do Direito.
+            </span>
+            <a className="w-[216px] px-[16px] py-[10px] text-center bg-[#8E1730] text-white">
+              Entre em contato
+            </a>
+          </div>
+        </section>
+
+        {/* SOBRE */}
+        <section></section>
+
+        {/* SERVIÇOS */}
+        <section></section>
+
+        {/* TIME */}
+        <section></section>
+
+        {/* DEPOIMENTOS */}
+        <section></section>
+
+        {/* LOCALIZAÇÃO */}
+        <section></section>
+
+        {/* FOOTER */}
+        <section></section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
