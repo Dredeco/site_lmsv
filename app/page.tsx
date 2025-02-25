@@ -5,9 +5,9 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <div className="flex min-h-screen min-w-full">
+        <Navbar />
       <main className="flex min-h-screen min-w-full max-w-[1920px] flex-col px-[272px]">
         {/* NAVBAR */}
-        <Navbar />
 
         {/* HOME */}
         <section className="h-[776px]">
