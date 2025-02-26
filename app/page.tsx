@@ -1,13 +1,13 @@
 import Image from "next/image";
 import BackgroundImage from '@/public/Background.png'
 import Navbar from "./components/Navbar";
+import Button from "./components/Button";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen min-w-full">
         <Navbar />
       <main className="flex min-h-screen min-w-full max-w-[1920px] flex-col px-[272px]">
-        {/* NAVBAR */}
 
         {/* HOME */}
         <section className="h-[776px]">
@@ -24,9 +24,7 @@ export default function Home() {
             <span className="w-[537px] text-[18px] font-normal leading-[28.8px] mb-[40px]">
               Com mais de 30 anos de experiência, unimos conhecimento técnico e visão multidisciplinar para oferecer assessoria jurídica personalizada em diversas áreas do Direito.
             </span>
-            <a className="w-[216px] px-[16px] py-[10px] text-center bg-[#8E1730] text-white">
-              Entre em contato
-            </a>
+            <Button variant="default" text="Entre em contato" />
           </div>
         </section>
 
