@@ -13,7 +13,6 @@ const Button = ({ variant = 'default', text = '' }) => {
         link: {
             backgroundColor: 'transparent',
             color: '#8E1730',
-            textDecoration: 'underline', // Adiciona um sublinhado para o estilo de link
         },
     };
 
@@ -21,7 +20,8 @@ const Button = ({ variant = 'default', text = '' }) => {
 
     return (
         <a
-            className="w-[216px] px-[16px] py-[10px] text-center"
+            className="w-[216px] px-[16px] py-[10px] text-center block"
+            href='#'
             style={{
                 backgroundColor: currentStyle.backgroundColor,
                 color: currentStyle.color,
