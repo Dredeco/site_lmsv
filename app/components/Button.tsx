@@ -5,10 +5,18 @@ const Button = ({ variant = 'default', text = '' }) => {
         default: {
             backgroundColor: '#8E1730',
             color: 'white',
+            hover: {
+                backgroundColor: '#74041c'
+            }
         },
         alternative: {
             backgroundColor: 'white',
             color: '#8E1730',
+            hover: {
+                backgroundColor: 'transparent',
+                color: 'white',
+                border: '1px solid white'
+            }
         },
         link: {
             backgroundColor: 'transparent',
