@@ -6,3 +6,20 @@
 html {
   font-family: var(--font-inter);
 }
+
+:root {
+  font-size: 62.5%;
+}
+
+.carousel-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carousel-item:hover, .carousel-item:focus, .carousel-item:active {
+  background-color: white; /* Fundo branco no hover */
+  color: #8E1730; /* Letras vermelhas no hover */
+}
+
+.carousel-item:hover > img, .carousel-item:focus > img, .carousel-item:active > img {
+  opacity: 0 !important;
+}

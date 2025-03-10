@@ -17,11 +17,11 @@ const Navbar = () => {
             setIsScrolled(false);
         }
     };
-
+    
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
-
+    
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {

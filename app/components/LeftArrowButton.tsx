@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const LeftArrowButton = () => {
     return (
-        <button className='w-12 h-12 bg-white flex items-center justify-center hover:bg-[##ECEEED]'>
+        <button className='min-w-[48px] min-h-[48px] bg-white flex items-center justify-center hover:bg-[##ECEEED]'>
             <Image 
                 src={LeftArrowIcon}
                 alt='Back'

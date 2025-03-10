@@ -4,7 +4,7 @@ import RightArrowIcon from '@/public/rigth_arrow.svg'
 
 const RightArrowButton = () => {
     return (
-        <button className='w-12 h-12 bg-white flex items-center justify-center hover:bg-[##ECEEED]'>
+        <button className='min-w-[48px] min-h-[48px] bg-white flex items-center justify-center hover:bg-[##ECEEED]'>
             <Image 
                 src={RightArrowIcon}
                 alt='Back'
