@@ -31,18 +31,18 @@ const Navbar = () => {
 
     return (
         <header 
-            className={`flex fixed items-center justify-between w-screen py-[21px] max-h-[112px] z-30 transition-all duration-100 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}
+            className={`flex fixed w-full text-[1.6rem] items-center justify-between h-[112px] z-30 transition-all duration-100 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}
         >
-            <nav className={`container mx-auto flex w-full max-w-[1920px] font-medium justify-between items-center px-4 md:px-20`}>
-                <div className="flex items-center">
+            <nav className={`w-full flex mx-auto max-w-[1376px] font-medium justify-between items-center`}>
+                <div className="flex items-center w-full">
                     <Link href="/">
                         <Image src={LogoImage} alt="Logo" className="max-w-[125px]" />
                     </Link>
                     <div className="hidden md:flex space-x-4 ml-[107px] text-[#757575]">
                         <Link href="/" className='w-[100px] px-[27.5px] py-[10px] text-center text-[#222] bg-[#fafafa]'>Home</Link>
-                        <Link href="/about" className='w-[100px] px-[27.5px] py-[10px] text-center'>Sobre</Link>
-                        <Link href="/services" className='w-[100px] px-[27.5px] py-[10px] text-center'>Serviços</Link>
-                        <Link href="/contact" className='w-[100px] px-[27.5px] py-[10px] text-center'>Contato</Link>
+                        <Link href="/sobre" className='w-[100px] px-[27.5px] py-[10px] text-center'>Sobre</Link>
+                        <Link href="/servicos" className='w-[100px] px-[27.5px] py-[10px] text-center'>Serviços</Link>
+                        <Link href="/contato" className='w-[100px] px-[27.5px] py-[10px] text-center'>Contato</Link>
                     </div>
                     <button className="md:hidden" onClick={toggleDropdown}>
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ const Navbar = () => {
                             <Link href="/" className='block w-full text-center py-2'>Home</Link>
                         </li>
                         <li>
-                            <Link href="/about" className='block w-full text-center py-2'>Sobre</Link>
+                            <Link href="/Sobre" className='block w-full text-center py-2'>Sobre</Link>
                         </li>
                         <li>
                             <Link href="/services" className='block w-full text-center py-2'>Serviços</Link>

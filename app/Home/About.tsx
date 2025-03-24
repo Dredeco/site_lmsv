@@ -1,42 +1,41 @@
 import React from 'react'
 import Button from '../components/Button'
-import Image from 'next/image'
-import EllipseImage from '@/public/Ellipse 2.png'
 import Container from '../components/Container'
 
 const About = () => {
     return (
-        <Container className="">
-            <div className="flex items-center gap-7">
-                <div className="w-6 h-6 bg-[#9C1C37]"></div>
-                <span className="text-[#8e1730]">Sobre nós</span>
+        <>
+        <Container className="h-auto bg-white z-10">
+        <div className="flex items-center gap-[8px] lg:gap-[28px] mb-[51px] relative">
+                <div className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] bg-[#9C1C37]" />
+                <span className="text-[#8e1730] text-[1.2rem] lg:text-[1.8rem]">
+                    Sobre nós
+                </span>
             </div>
-
-            <div className="pt-10 flex flex-wrap flex-row w-full justify-between py-[10px]">
-                <span className="text-[4rem] font-light leading-[50.4px]">
-                    Somoso guiados por um propósito <br /> 
-                    de prestar assessoria e consultoria <br />
-                    jurídica personalizada e fiel aos <br /> 
+        
+        <div className='w-full flex flex-wrap justify-between gap-5'>            
+            <div className="lg:max-w-[640px]">
+                <span className="text-[2.4rem] lg:text-[4.2rem] font-light leading-[133%] tracking-[-1.26px]">
+                    Somos guiados por um propósito
+                    de prestar assessoria e consultoria
+                    jurídica personalizada e fiel aos
                     nossos valores.
                 </span>
-
-                <div className="py-4">
-                    <p className="pb-[26px]">
-                        Atuamos nos diversos segmentos do Direito, com destaque para o Direito <br />
-                        Penal, Direito Constitucional e Administrativo, Direito Tributário, Direito da <br />
-                        Internet e Propriedade Intelectual, Direito Civil e Processual, Direito <br />
-                        Empresarial, Direito Trabalhista e Direito de Família e Sucessório.
-                    </p>
-
-                    <Button variant="default" text="Ver mais" />
-                </div>
             </div>
-            <Image 
-            src={EllipseImage}
-            alt="ellipse"
-            className="absolute left-0 bottom-[-280px] z-10"
-            />
+
+            <div className="lg:max-w-[600px]">
+                <p className="text-[1.2rem] lg:text-[1.8rem] mb-[38px] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
+                    Atuamos nos diversos segmentos do Direito, com destaque para o Direito
+                    Penal, Direito Constitucional e Administrativo, Direito Tributário, Direito da
+                    Internet e Propriedade Intelectual, Direito Civil e Processual, Direito
+                    Empresarial, Direito Trabalhista e Direito de Família e Sucessório.
+                </p>
+
+                <Button variant="default" text="Ver mais" />
+            </div>
+        </div>
         </Container>
+        </>
     )
 }
 

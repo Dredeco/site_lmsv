@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 const LeftArrowButton = () => {
     return (
-        <button className='min-w-[48px] min-h-[48px] bg-white flex items-center justify-center hover:bg-[##ECEEED]'>
+        <div className='min-w-[48px] cursor-pointer min-h-[48px] bg-white flex items-center justify-center active:bg-[##ECEEED] focus:bg-[##ECEEED] target:bg-[##ECEEED]'>
             <Image 
                 src={LeftArrowIcon}
                 alt='Back'
             />
-        </button>
+        </div>
     )
 }
 

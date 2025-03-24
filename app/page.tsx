@@ -17,9 +17,8 @@ import Footer from "./components/Footer";
 export default function Home() {
   
   return (
-    <div className="flex min-h-screen margin-[0 auto] text-[1.7rem]">
-        <Navbar />
-      <main className="flex min-h-screen min-w-full flex-col items-center">
+    <div className="flex min-h-screen w-full justify-center relative">
+      <main className="w-full">
 
         {/* -------------- HOME ------------------- */}
         <Hero />
@@ -35,9 +34,6 @@ export default function Home() {
 
         {/* ------------ TIME ----------------- */}
         <Team />
-
-        {/* DEPOIMENTOS */}
-        <Comments />
 
         {/* FOOTER */}
         <Footer />

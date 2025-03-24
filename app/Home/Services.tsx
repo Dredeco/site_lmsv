@@ -5,6 +5,7 @@ import LeftArrowButton from '../components/LeftArrowButton'
 import Container from '../components/Container'
 import BgImage1 from '@/public/image-model-1.png'
 import BgImage2 from '@/public/image-model-2.png'
+import EllipseImage from '@/public/Ellipse 2.png'
 import Image from 'next/image'
 
 const Services = () => {
@@ -15,44 +16,51 @@ const Services = () => {
     ]
 
     return (
-        <Container className="bg-[#8E1730] text-white">
-            <div className="flex items-center gap-7">
-            <div className="w-6 h-6 bg-[#9C1C37]"></div><span>Nossos Serviços</span>
+        <div className='relative w-full h-auto'>
+        <Image 
+            src={EllipseImage}
+            alt="ellipse"
+            className="absolute left-0 -top-80 hidden min-[1680px]:max-[1920px]:block"
+        />
+        <Container className="text-white bg-[#8E1730] py-40">
+            <div className="flex items-center gap-[28px]">
+                <div className="w-[24px] h-[24px] bg-[#9C1C37]" />
+                <span className='text-[1.8rem] tracking-[-0.54px] font-normal'>Nossos Serviços</span>
             </div>
 
-            <div className="pt-10 flex flex-wrap flex-row justify-between w-full py-[10px]">
-                <span className="text-[4rem] font-light leading-[50.4px]">
+            <div className="flex flex-wrap flex-row justify-between w-full pt-[45px]">
+                <span className="text-[4.2rem] font-light leading-[50.4px] tracking-[-1.26px]">
                 Conheça nossas áreas <br />
                 de atuação, formadas por <br />
                 advogados especializados.
                 </span>
 
-                <div className="py-4">
-                <p className="pb-[26px]">
-                    A equipe do Leão, Moreno & Vianna Advogados é composta por <br />
-                    advogados especializados em crimes tributários, matérias inerentes ao <br />
-                    direito penal econômico, crimes contra a honra, crimes eleitorais e crimes <br />
-                    da competênciado Tribunal do Júri.
-                </p>
+                <div className="py-4 flex flex-col gap-[26px]">
+                    <p className="text-[1.8rem] tracking-[-0.36px] leading-[160%] font-normal">
+                        A equipe do Leão, Moreno & Vianna Advogados é composta por <br />
+                        advogados especializados em crimes tributários, matérias inerentes ao <br />
+                        direito penal econômico, crimes contra a honra, crimes eleitorais e crimes <br />
+                        da competênciado Tribunal do Júri.
+                    </p>
 
-                <Button variant="alternative" text="Ver mais" />
+                    <Button variant="alternative" text="Ver mais" />
                 </div>
             </div>
 
             {/* CARROSEL */}
-            <div className="w-full mt-10">
+            <div className="w-full mt-[56px]">
                 <div className="w-full flex gap-4 justify-end">
                     <LeftArrowButton />
                     <RightArrowButton />
                 </div>
-                <div className="flex w-fullv flex-wrap gap-4 mt-5">
+                <div className="flex w-full justify-between flex-wrap gap-4 mt-5">
                 {carroselOptions.map((item: any, index: any) => {
                     return (
-                    <div key={item.name} className="carousel-item w-[447.33px] h-[434px] flex flex-col justify-between relative z-10 bg-black p-9">
-                        <h3 className='max-w-36 text-[2.4rem] font-light leading-[26.03px] mt-9'>{item.name}</h3>
+                    <div key={item.name} className={`carousel-item w-full max-w-[447.33px] h-[434px] flex-${index} lg:flex-1 flex flex-col justify-between relative z-10 bg-black p-9`}>
+                        <h3 className='max-w-36 text-[24px] font-light leading-[26.03px] mt-9'>{item.name}</h3>
                         <div className='flex flex-col gap-10 text-[1.4rem]'>
-                            <span className='font-light'>{item.text}</span>
-                            <span className='font-medium'>Veja mais</span>
+                            <span className='font-light text-[14px]'>{item.text}</span>
+                            <span className='font-medium text-[15px]'>Veja mais</span>
                         </div>
 
                         <Image 
@@ -66,7 +74,8 @@ const Services = () => {
                 })}
                 </div>
             </div>
-            </Container>
+        </Container>
+        </div>
     )
 }
 
