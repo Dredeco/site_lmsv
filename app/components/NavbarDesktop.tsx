@@ -44,7 +44,7 @@ const NavbarDesktop = () => {
 
     return (
         <Container 
-            className={`hidden lg:flex fixed w-full h-fit text-[1.6rem] items-center py-0 justify-between min-h-[112px] max-h-[112px] z-30 transition-all duration-100 ${(isScrolled || actualPage === 'contato') ? 'bg-white shadow-lg' : 'bg-transparent'}`}
+            className={`hidden lg:flex fixed w-full h-fit text-[1.6rem] items-center !py-0 justify-between min-h-[112px] max-h-[112px] z-30 transition-all duration-100 ${(isScrolled || actualPage === 'contato') ? 'bg-white shadow-lg' : 'bg-transparent'}`}
         >
             <nav className={`w-full flex mx-auto max-w-[1376px] font-medium justify-between items-center`}>
                 <div className="flex items-center w-full">
