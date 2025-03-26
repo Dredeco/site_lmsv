@@ -6,7 +6,7 @@ import Container from '../components/Container'
 
 const Hero = () => {
     return (
-        <div className='!relative h-[776px] lg:min-h-[776px] w-full mx-auto max-w-[1920px]'>
+        <div className='!relative lg:h-[776px] w-full mx-auto max-w-[1920px]'>
             <Image 
                 className="absolute hidden lg:block top-0 right-0 min-h-full max-h-full -z-10 w-auto"
                 src={BackgroundImage}
@@ -15,7 +15,7 @@ const Hero = () => {
                 quality={100}
             />
             <Container>
-                <div className="flex flex-col h-[770px] justify-center">
+                <div className="flex flex-col lg:h-[776px] justify-center mt-[150px] lg:mt-0">
                     <h1 className="text-[3.2rem] lg:text-[5.2rem] w-full lg:max-w-[640px] font-medium leading-[120%] mb-[24px] tracking-[-0.14px]">
                         Soluções jurídicas e
                         estratégicas com
