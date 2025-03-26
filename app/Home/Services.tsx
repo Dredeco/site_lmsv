@@ -43,7 +43,9 @@ const Services = () => {
                         da competênciado Tribunal do Júri.
                     </p>
 
-                    <Button variant="alternative" text="Ver mais" />
+                    <a href='/servicos' >
+                        <Button variant="alternative" text="Ver mais" />
+                    </a>
                 </div>
             </div>
 

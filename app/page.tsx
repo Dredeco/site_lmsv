@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import TeamImage from '@/public/perfil.png'
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavbarDesktop";
 import Button from "./components/Button";
 import EllipseImage from '@/public/Ellipse 2.png'
 import Hero from "./Home/Hero";

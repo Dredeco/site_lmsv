@@ -26,10 +26,13 @@ const Hero = () => {
                         técnico e visão multidisciplinar para oferecer assessoria
                         jurídica personalizada em diversas áreas do Direito.
                     </span>
-                    <Button 
-                        variant="default" 
-                        text="Entre em contato" 
-                    />
+                    <a href='/contato' >
+                        <Button 
+                            variant="default" 
+                            text="Entre em contato" 
+                            
+                        />
+                    </a>
                 </div>
             </Container>
         </div>

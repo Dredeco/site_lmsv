@@ -21,7 +21,7 @@ export const Hero = () => {
                 <Image 
                   src={heroBackground}
                   alt=''
-                  className='hidden lg:block'
+                  className=''
                   priority
                   quality={100}
                 />

@@ -10,22 +10,22 @@ import TwitterIcon from "@/public/twitter.svg"
 
 const Links = () => {
     return (
-        <div className='text-white text-[14px] flex flex-col xl:col-span-2 justify-between mt-[32px] md:mt-0'>
-            <div className='grid md:grid-cols-2 xl:grid-cols-3 sm:gap-14'>
+        <div className='text-white text-[14px] flex flex-col xl:col-span-2 gap-[30px] justify-between mt-[32px] md:mt-0'>
+            <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-[16px] sm:gap-14'>
                 <div className='flex flex-col gap-6 sm:flex-1'>
                     <span>INFORMAÇÕES</span>
-                    <a href=''>Sobre</a>
-                    <a href=''>Serviços</a>
+                    <a href='/sobre'>Sobre</a>
+                    <a href='/servicos'>Serviços</a>
                 </div>
 
                 <div className='flex flex-col gap-6 sm:flex-1'>
                     <span>SOBRE NÓS</span>
-                    <a href=''>Contato</a>
-                    <a href=''>Nosso time</a>
-                    <a href=''>Localização</a>
+                    <a href='/contato'>Contato</a>
+                    <a href='/sobre'>Nosso time</a>
+                    <a href='/contato'>Localização</a>
                 </div>
 
-                <a href='' className='hidden xl:block'>
+                <a href='/' className='hidden xl:block'>
                     <Image 
                         src={LogoImage}
                         alt=''
@@ -43,7 +43,7 @@ const Links = () => {
                     </span>
                 </div>
                 <div className='flex flex-col w-full'>
-                    <div className='flex items-center gap-4'>
+                    <a href='/contato' className='flex items-center gap-4'>
                         <div className='w-20 h-20 border border-white border-opacity-15 flex justify-center items-center rounded-full'>
                             <Image 
                                 src={ZoomIcon}
@@ -51,7 +51,7 @@ const Links = () => {
                             />
                         </div>
                         <span>Reunião virtual através do Zoom™</span>
-                    </div>
+                    </a>
 
                     <a href='https://api.whatsapp.com/send?phone=5521982849948' className='flex gap-4 items-center mt-4'>
                         <div className='w-20 h-20 border border-white border-opacity-15 flex justify-center items-center rounded-full'>

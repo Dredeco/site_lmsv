@@ -31,7 +31,9 @@ const About = () => {
                     Empresarial, Direito Trabalhista e Direito de Família e Sucessório.
                 </p>
 
-                <Button variant="default" text="Ver mais" />
+                <a href='/sobre'>
+                    <Button variant="default" text="Ver mais" />
+                </a>
             </div>
         </div>
         </Container>
