@@ -58,7 +58,7 @@ const NavbarMobile = () => {
                     </Link>
 
 
-                    <div className={`absolute flex flex-col border-y bg-white w-full top-[112px] left-0 text-[#757575] ${isOpen ? 'top-[115px]' : '-top-[512px]'}`}>
+                    <div className={`absolute flex flex-col bg-white w-full left-0 text-[#757575] ${isOpen ? 'top-[112px]' : '-top-[500px]'}`}>
                         <Link 
                             href="/" 
                             onClick={() => {
