@@ -49,7 +49,7 @@ const NavbarMobile = () => {
 
     return (
         <Container 
-            className={`flex lg:hidden fixed w-full text-[1.6rem] items-center py-0 justify-between min-h-[115px] z-30 transition-all duration-100 ${(isScrolled || actualPage === 'contato') ? 'bg-white shadow-lg' : 'bg-transparent'}`}
+            className={`flex lg:hidden fixed w-full text-[1.6rem] items-center py-0 justify-between min-h-[115px] max-h-[115px] z-30 transition-all duration-100 ${(isScrolled || actualPage === 'contato') ? 'bg-white shadow-lg' : 'bg-transparent'}`}
         >
             <nav className={`w-full flex mx-auto max-w-[1376px] font-medium justify-between items-center`}>
                 <div className="flex items-center w-full">
