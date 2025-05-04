@@ -18,23 +18,23 @@ const Services = () => {
     return (
         <div className='relative w-full h-auto'>
         <Container className="text-white bg-[#8E1730] py-40">
-            <div className="flex items-center gap-[28px]">
-                <div className="w-[24px] h-[24px] bg-[#9C1C37]" />
-                <span className='text-[1.8rem] tracking-[-0.54px] font-normal'>Nossos Serviços</span>
+            <div className="flex items-center gap-[28px] mb-[34px] lg:mb-[51px]">
+                <div className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] bg-[#9C1C37]" />
+                <span className='text-[1.2rem] lg:text-[1.8rem] tracking-[-0.54px] font-normal'>Nossos Serviços</span>
             </div>
 
-            <div className="flex flex-wrap flex-row justify-between w-full pt-[45px]">
-                <span className="text-[4.2rem] font-light leading-[50.4px] tracking-[-1.26px]">
+            <div className="flex flex-wrap flex-row justify-between w-full gap-5">
+                <span className="text-[2.4rem] lg:text-[4.2rem] font-light leading-[133%] tracking-[-1.26px]">
                 Conheça nossas áreas <br />
                 de atuação, formadas por <br />
                 advogados especializados.
                 </span>
 
-                <div className="py-4 flex flex-col gap-[26px]">
-                    <p className="text-[1.8rem] tracking-[-0.36px] leading-[160%] font-normal">
-                        A equipe do Leão, Moreno & Vianna Advogados é composta por <br />
-                        advogados especializados em crimes tributários, matérias inerentes ao <br />
-                        direito penal econômico, crimes contra a honra, crimes eleitorais e crimes <br />
+                <div className="py-4 flex flex-col gap-[26px] lg:max-w-[600px]">
+                    <p className="text-[1.2rem] lg:text-[1.8rem] tracking-[-0.36px] leading-[160%] font-normal">
+                        A equipe do Leão, Moreno & Vianna Advogados é composta por
+                        advogados especializados em crimes tributários, matérias inerentes ao
+                        direito penal econômico, crimes contra a honra, crimes eleitorais e crimes
                         da competênciado Tribunal do Júri.
                     </p>
 

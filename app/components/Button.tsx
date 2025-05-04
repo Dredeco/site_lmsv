@@ -35,7 +35,7 @@ const Button = ({
 
     return (
         <button
-            className="w-[216px] px-[16px] py-[10px] text-[1.5rem] tracking-[-0.15px] text-center block"
+            className="w-full lg:w-[216px] px-[16px] py-[10px] text-[1.5rem] tracking-[-0.15px] text-center block"
             style={{
                 backgroundColor: isHovered 
                     ? currentStyle.hover?.backgroundColor || currentStyle.backgroundColor 

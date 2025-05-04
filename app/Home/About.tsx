@@ -6,7 +6,7 @@ const About = () => {
     return (
         <>
         <Container className="h-auto bg-white z-10">
-        <div className="flex items-center gap-[8px] lg:gap-[28px] mb-[51px] relative">
+        <div className="flex items-center gap-[8px] lg:gap-[28px] mb-[34px] lg:mb-[51px] relative">
                 <div className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] bg-[#9C1C37]" />
                 <span className="text-[#8e1730] text-[1.2rem] lg:text-[1.8rem]">
                     Sobre nós
@@ -23,7 +23,7 @@ const About = () => {
 
 
             <div className="lg:max-w-[600px] flex flex-col">
-                <p className="pt-3 text-[1.2rem] lg:text-[1.8rem] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
+                <p className="mb-[24px] lg:mb-0 pt-3 text-[1.2rem] lg:text-[1.8rem] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
                     Atuamos nos diversos segmentos do Direito, com destaque para o Direito
                     Penal, Direito Constitucional e Administrativo, Direito Tributário, Direito da
                     Internet e Propriedade Intelectual, Direito Civil e Processual, Direito
