@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import BackgroundImage from '@/public/Background.png'
+import BackgroundImage from '@/public/Background2.png'
 import Button from '../components/Button'
 import Container from '../components/Container'
 
