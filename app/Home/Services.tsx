@@ -17,11 +17,6 @@ const Services = () => {
 
     return (
         <div className='relative w-full h-auto'>
-        <Image 
-            src={EllipseImage}
-            alt="ellipse"
-            className="absolute left-0 -top-80 hidden min-[1680px]:max-[1920px]:block"
-        />
         <Container className="text-white bg-[#8E1730] py-40">
             <div className="flex items-center gap-[28px]">
                 <div className="w-[24px] h-[24px] bg-[#9C1C37]" />

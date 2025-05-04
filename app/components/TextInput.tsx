@@ -8,7 +8,7 @@ interface InputProps {
     onChange: (e:string) => void
 }
 
-const TextInput: React.FC<InputProps> = ({ label, placeholder, type = 'text', value, onChange }) => {
+const TextInput: React.FC<InputProps> = ({ label, placeholder, type = 'text', value, onChange }, ...props ) => {
     return (
         <div className="border px-3 py-2">
             <label className="block uppercase opacity-40 text-gray-700 text-[10px] font-bold mb-1">
@@ -19,7 +19,7 @@ const TextInput: React.FC<InputProps> = ({ label, placeholder, type = 'text', va
                 placeholder={placeholder} 
                 value={value}
                 onChange={e => onChange(e.target.value)}
-                className="text-[rgba(117, 117, 117, 0.20)] text-[14px] focus:outline-none" 
+                className={`text-[rgba(117, 117, 117, 0.20)] text-[14px] focus:outline-none ${props}`}
             />
         </div>
     );

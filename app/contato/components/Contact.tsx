@@ -8,10 +8,10 @@ import LocationIcon from '@/public/contato/location.svg'
 
 const Contact = () => {
     const tecnologies = [
-        {text: '+55 (021) 9999-9990', icon: WhatsappIcon},
-        {text: 'contato@lmvadvogados.adv.br', icon: EmailIcon},
-        {text: 'Agende agora mesmouma reunião no ZOOM', icon: CameraIcon},
-        {text: 'Empresarial Cândido Mendes, RJCentro Empresarial Varig, DF', icon: LocationIcon},
+        {text: '+55 (21) 98284-9948', icon: WhatsappIcon, link: 'https://api.whatsapp.com/send?phone=5521982849948'},
+        {text: 'contato@lmvadvogados.adv.br', icon: EmailIcon, link: ''},
+        {text: 'Agende agora mesmo uma reunião no ZOOM', icon: CameraIcon, link: ''},
+        {text: 'Centro Empresarial Cândido Mendes, Centro, RJ', icon: LocationIcon, link: ''},
     ]
     return (
         <Container className="h-auto bg-[#FAFAFA]">
@@ -39,16 +39,18 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 w-full lg:max-w-[640px] gap-4">
                     {tecnologies.map((tecnology: any) => {
                         return (
-                            <div key={tecnology.text} className='px-[24px] flex flex-col items-center gap-12 h-auto py-[40px] text-center bg-white'>
-                                <Image 
-                                    src={tecnology.icon}
-                                    alt=''
-                                />
+                            <a href={tecnology.link}> 
+                                <div key={tecnology.text} className='px-[24px] flex flex-col items-center gap-12 h-auto py-[40px] text-center bg-white'>
+                                    <Image 
+                                        src={tecnology.icon}
+                                        alt=''
+                                    />
 
-                                <span className='text-[1.4rem] lg:text-[1.8rem] leading-[160%] tracking-[-0.36px]'>
-                                    {tecnology.text}
-                                </span>
-                            </div>
+                                    <span className='text-[1.4rem] lg:text-[1.8rem] leading-[160%] tracking-[-0.36px]'>
+                                        {tecnology.text}
+                                    </span>
+                                </div>
+                            </a>
                         )
                     })}
                 </div>

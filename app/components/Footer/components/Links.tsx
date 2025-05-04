@@ -37,9 +37,10 @@ const Links = () => {
                 <div className='flex flex-col'>
                     <span>CONTATO</span>
                     <span className='w-[232px] mt-[24px] mb-[50px]'>
-                        +55 21 98284-9948<br />
-                        hello@logoipsum.com<br />
-                        Rio de Janeiro
+                        +55 (21) 98284-9948<br />
+                        contato@lmvadvogados.adv.br<br />
+                        Centro Empresarial <br />
+                        Cândido Mendes, Centro, RJ
                     </span>
                 </div>
                 <div className='flex flex-col w-full'>

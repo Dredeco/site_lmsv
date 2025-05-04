@@ -14,17 +14,16 @@ const About = () => {
             </div>
         
         <div className='w-full flex flex-wrap justify-between gap-5'>            
-            <div className="lg:max-w-[640px]">
-                <span className="text-[2.4rem] lg:text-[4.2rem] font-light leading-[133%] tracking-[-1.26px]">
-                    Somos guiados por um propósito
-                    de prestar assessoria e consultoria
-                    jurídica personalizada e fiel aos
-                    nossos valores.
-                </span>
-            </div>
+            <span className="lg:max-w-[640px] text-[2.4rem] lg:text-[4.2rem] font-light leading-[133%] tracking-[-1.26px]">
+                Somos guiados por um propósito
+                de prestar assessoria e consultoria
+                jurídica personalizada e fiel aos
+                nossos valores.
+            </span>
 
-            <div className="lg:max-w-[600px]">
-                <p className="text-[1.2rem] lg:text-[1.8rem] mb-[38px] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
+
+            <div className="lg:max-w-[600px] flex flex-col">
+                <p className="pt-3 text-[1.2rem] lg:text-[1.8rem] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
                     Atuamos nos diversos segmentos do Direito, com destaque para o Direito
                     Penal, Direito Constitucional e Administrativo, Direito Tributário, Direito da
                     Internet e Propriedade Intelectual, Direito Civil e Processual, Direito
