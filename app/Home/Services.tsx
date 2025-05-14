@@ -10,9 +10,9 @@ import Image from 'next/image'
 
 const Services = () => {
     const carroselOptions = [
-        {name: 'Direito criminal', text: 'Desenvolvemos uma advocacia artesanal no contencioso processual penal - inquéritos, ações penais e atuação nos tribunais - e na área consultiva com elaboração de pareceres técnicos. Possuímos expertise...'},
-        {name: 'Direito tributário', text: 'CONSULTORIA TRIBUTÁRIA: Soluções personalizadas para redução da carga tributária. Consultoria relacionada a tributos e procedimentos fiscais, administração e manutenção de contingências fiscais e regimes...'},
-        {name: 'Societário /empresarial', text: 'FUSÕES E AQUISIÇÕES: Assessoria em operações de aquisição e alienação de participações societárias, fusões, incorporações, cisões, aquisição e alienação de ativos, bem como, negociação, estruturação,...'},
+        {name: 'Direito Criminal Empresarial', text: 'Atuação estratégica no contencioso penal e consultivo. Expertise em crimes tributários, crimes contra a ordem econômica, crimes eleitorais, contra a honra e Tribunal do Júri. Defesa técnica em inquéritos, ações penais...'},
+        {name: 'Direito tributário', text: '<b>Consultivo</b>: Planejamento tributário, regimes especiais, consultoria estratégica e compliance fiscal.<br /> <b>Contencioso</b>: Atuação administrativa e judicial, inclusive nos Tribunais Superiores. ...'},
+        {name: 'Direito Societário e Empresarial', text: '<b>M&A</b>: Estruturação e condução de operações de fusão, aquisição, cisão e reestruturação societária.<br /> <b>Consultivo Societário</b>: Atos constitutivos, reuniões societárias, planejamento e governança corporativa...'},
     ]
 
     return (
@@ -31,11 +31,10 @@ const Services = () => {
                 </span>
 
                 <div className="py-4 flex flex-col gap-[26px] lg:max-w-[600px]">
-                    <p className="text-[1.2rem] lg:text-[1.8rem] tracking-[-0.36px] leading-[160%] font-normal">
-                        A equipe do Leão, Moreno & Vianna Advogados é composta por
-                        advogados especializados em crimes tributários, matérias inerentes ao
-                        direito penal econômico, crimes contra a honra, crimes eleitorais e crimes
-                        da competênciado Tribunal do Júri.
+                    <p className="text-[1.2rem] lg:text-[1.8rem] tracking-[-0.36px] leading-[160%] font-light">
+                        O escritório Leão, Moreno, Scisinio e Vianna Advogados oferece uma 
+                        advocacia full service voltada ao setor corporativo, com atuação 
+                        integrada nas seguintes áreas:
                     </p>
 
                     <a href='/servicos' >
@@ -56,7 +55,7 @@ const Services = () => {
                     <div key={item.name} className={`carousel-item w-full max-w-[447.33px] h-[434px] flex-${index} lg:flex-1 flex flex-col justify-between relative z-10 bg-black p-9`}>
                         <h3 className='max-w-36 text-[24px] font-light leading-[26.03px] mt-9'>{item.name}</h3>
                         <div className='flex flex-col gap-10 text-[1.4rem]'>
-                            <span className='font-light text-[14px]'>{item.text}</span>
+                            <span className='font-light text-[14px]' dangerouslySetInnerHTML={{__html: item.text}}></span>
                             <span className='font-medium text-[15px]'>Veja mais</span>
                         </div>
 

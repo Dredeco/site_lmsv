@@ -17,14 +17,17 @@ const Hero = () => {
             <Container>
                 <div className="flex flex-col lg:h-[776px] justify-center mt-[150px] lg:mt-0">
                     <h1 className="text-[3.2rem] lg:text-[5.2rem] w-full lg:max-w-[640px] font-medium leading-[120%] mb-[24px] tracking-[-0.14px]">
-                        Soluções jurídicas e
-                        estratégicas com
+                        Soluções jurídicas <br />
+                        e estratégicas com
                         tradição e excelência
                     </h1>
-                    <span className="text-[1.4rem] lg:text-[1.8rem] text-[#424847] font-normal w-full lg:max-w-[520px] tracking-[-0.36px] leading-[160%] mb-[40px]">
-                        Com mais de 30 anos de experiência, unimos conhecimento
-                        técnico e visão multidisciplinar para oferecer assessoria
-                        jurídica personalizada em diversas áreas do Direito.
+                    <span className="text-[1.4rem] lg:text-[1.8rem] text-[#424847] font-normal w-full lg:max-w-[570px] tracking-[-0.36px] leading-[160%] mb-[40px]">
+                        Com mais de duas décadas de atuação na advocacia corporativa, o 
+                        escritório Leão, Moreno, Scisinio e Vianna Advogados se destaca por 
+                        sua abordagem personalizada, técnica e eficiente. Nosso trabalho alia 
+                        excelência jurídica, sensibilidade humanista e uso estratégico da 
+                        tecnologia para entregar soluções sob medida, alinhadas aos 
+                        objetivos e desafios específicos de cada cliente.
                     </span>
                     <a href='/contato' >
                         <Button 

@@ -8,10 +8,10 @@ import Container from '../components/Container'
 
 const Team = () => {
     const team = [
-        {name: 'Bernardo Gomes Leão', OAB: 'OAB/RJ 165.196', linkedin: 'https://br.linkedin.com/'},
+        {name: 'Bernardo <br />Gomes Leão', OAB: 'OAB/RJ 165.196', linkedin: 'https://br.linkedin.com/'},
         {name: 'Débora Claizoni Moreno de Melo', OAB: 'OAB/RJ 229.132', linkedin: 'https://br.linkedin.com/'},
         {name: 'Pedro Ramon Silvestre Vianna', OAB: 'OAB/RJ 225.511', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Tales Donato Scisinio', OAB: 'OAB/RJ 132.565', linkedin: 'https://br.linkedin.com/'},
+        {name: 'Tales <br />Donato Scisinio', OAB: 'OAB/RJ 132.565', linkedin: 'https://br.linkedin.com/'},
         {name: 'Bernardo Leão', OAB: '165.196 OAB', linkedin: 'https://br.linkedin.com/'},
         {name: 'Débora Moreno', OAB: '138.260 OAB', linkedin: 'https://br.linkedin.com/'},
         {name: 'Pedro Vianna', OAB: '225.511 OAB', linkedin: 'https://br.linkedin.com/'},
@@ -52,8 +52,10 @@ const Team = () => {
                         />
 
                         <div className='w-full flex flex-col gap-3 px-[10px]'>
-                            <span className="w-[80%] font-semibold text-[#8e1730] text-[2.4rem] uppercase">
-                                {member.name}
+                            <span 
+                            className="w-[80%] font-semibold text-[#8e1730] text-[2.4rem] uppercase"
+                            dangerouslySetInnerHTML={{__html: member.name}}
+                            >
                             </span> 
                             <p className="font-light text-[2.4rem]">{member.OAB}</p>
                             <a href={member.linkedin}>
