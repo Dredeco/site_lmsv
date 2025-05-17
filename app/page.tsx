@@ -18,7 +18,7 @@ export default function Home() {
   
   return (
     <div className="flex min-h-screen w-full justify-center relative">
-      <main className="w-full">
+      <main className="overflow-x-hidden w-full">
 
         {/* -------------- HOME ------------------- */}
         <Hero />

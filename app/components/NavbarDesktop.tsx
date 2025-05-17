@@ -10,6 +10,9 @@ import Container from './Container'
 const NavbarDesktop = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [actualPage, setActualPage] = useState('home')
+    const isSobrePage = window.location.href.includes('sobre')
+    const isServicosPage = window.location.href.includes('servicos')
+    const isContatoPage = window.location.href.includes('contato')
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -27,16 +30,12 @@ const NavbarDesktop = () => {
     }, []);
 
     useEffect(() => {
-        const isSobrePage = window.location.href.includes('sobre')
-        const isServicosPage = window.location.href.includes('servicos')
-        const isContatoPage = window.location.href.includes('contato')
-
         if(isSobrePage) {
             setActualPage('sobre')
         } else if (isServicosPage) {
             setActualPage('servicos')
         } else if (isContatoPage) {
-            setActualPage('servicos')
+            setActualPage('contato')
         } else {
             setActualPage('home')
         }
@@ -44,7 +43,7 @@ const NavbarDesktop = () => {
 
     return (
         <Container 
-            className={`hidden lg:flex fixed w-full h-fit text-[1.6rem] items-center !py-0 justify-between min-h-[112px] max-h-[112px] z-30 transition-all duration-100 ${(isScrolled || actualPage === 'contato') ? 'bg-white shadow-lg' : 'bg-transparent'}`}
+            className={`hidden lg:flex fixed w-full h-fit text-[1.6rem] items-center !py-0 justify-between min-h-[112px] max-h-[112px] z-30 transition-all duration-100 ${(isScrolled || isContatoPage || actualPage === 'contato') ? 'bg-white shadow-lg' : 'bg-transparent'}`}
         >
             <nav className={`w-full flex mx-auto max-w-[1376px] font-medium justify-between items-center`}>
                 <div className="flex items-center w-full">
