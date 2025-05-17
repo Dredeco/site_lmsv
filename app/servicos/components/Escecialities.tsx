@@ -12,33 +12,33 @@ import Image from 'next/image'
 const Escecialities = () => {
     const especialities = [
         {
-            name: 'Societário/ empresarial', 
-            text: 'Assessoria em operações de aquisição e alienação de participações societárias, fusões, incorporações, cisões, aquisição e alienação de ativos, bem como, negociação, estruturação, implementação e interface com as autoridades reguladoras competentes.',
+            name: 'Direito Civil<br /> e Processual',
+            text: '<b>Contratos:</b> Elaboração e revisão de instrumentos civis e comerciais.<br /> <b>Imobiliário:</b> Assessoria em operações imobiliárias, financiamento, incorporações, loteamentos e auditoria jurídica. Consumidor: Consultoria e defesa em relações de consumo e gestão de passivo consumerista.',
             image: especiality1
         },
         {
-            name: 'Direito civil e processual', 
-            text: 'Elaboração e negociação de contratos de natureza civil e comercial em geral, em especial contratos de prestação de serviços, distribuição, fornecimento e representação comercial.',
+            name: 'Direito de Família<br /> e Sucessório', 
+            text: '<b>Planejamento Patrimonial e Sucessório:</b> Estruturação de holdings e testamentos.<br /> <b>Atuação Judicial e Extrajudicial:</b> Adoção, inventário, divórcio, partilha, curatela e parentalidade.<br /> <b>Mediação Familiar:</b> Soluções consensuais com sensibilidade e técnica.',
             image: especiality2
         },
         {
-            name: 'Direito de família e sucessório', 
-            text: 'Estruturação de alternativas eficientes para proteção dos bens (pessoa física ou jurídica) e organização de sua sucessão, no Brasil e no exterior, para fins de sucessão. Assessoria na elaboração de testamentos e na organização de estruturas societárias para este propósito.',
+            name: 'Direito<br /> Trabalhista', 
+            text: '<b>Contencioso:</b> Defesa em ações individuais e coletivas, estratégias preventivas e gestão de risco.<br /> <b>Consultivo:</b> Suporte ao RH, contratos, compliance trabalhista e terceirização.',
             image: especiality3
         },        
         {
-            name: 'Direito Trabalhista', 
-            text: 'Nossa atuação tem como foco a prevenção e gestão de crises, em processos que envolvem inspeções regulatórias, investigações de empregados e executivos nos diversos contextos.',
+            name: 'Direito<br /> Administrativo', 
+            text: 'Atuação em licitações, contratos administrativos, responsabilidade de agentes públicos, processos administrativos e concessões.',
             image: especiality4
         },        
         {
-            name: 'Direito Administrativo', 
-            text: 'Nosso escritório atua em causas envolvendo as relações admitidas pela Administração Pública, realizadas por suas pessoas jurídicas, órgãos e agentes públicos, no interesse de pessoas físicas e jurídicas.',
+            name: 'Direito Digital<br /> e Propriedade Intelectual', 
+            text: '<b>Consultivo:</b> Adequação à LGPD, políticas de privacidade, contratos tecnológicos e compliance digital.<br /> <b>Contencioso:</b> Disputas sobre marcas, registros, remoção de conteúdo e violação de direitos autorais.',
             image: especiality5
         },        
         {
-            name: 'Direito digital /propriedade intelectual', 
-            text: 'Prestamos assessoria jurídica extrajudicial e judicial para clientes com demandas de identificação de autoria, registro de software, registros e disputas de marcas (propriedade intelectual), contratos de tecnologia, direitos autorais e remoção de conteúdo na...',
+            name: 'Direito<br /> Imobiliário', 
+            text: 'Oferecemos suporte completo em transações imobiliárias, estruturação de empreendimentos, contratos de compra e venda, locações, incorporações e auditorias jurídicas. Atuamos desde a análise jurídica de riscos até a execução de estratégias eficazes de viabilização de negócios no setor imobiliário.',
             image: especiality6
         },
     ]
@@ -59,7 +59,7 @@ const Escecialities = () => {
                 <div className='grid mt-[40px] h-auto grid-cols-[repeat(auto-fit,_minmax(272px,_447px))] gap-[16px]'>
                     {especialities.map((especiality: any) => {
                         return (
-                            <div key={especiality.name} className='w-full flex px-[29px] py-[61px] flex-col justify-between bg-black h-[434px] max-h-[434px] max-w-[447px] relative'>
+                            <div key={especiality.name} className='w-full flex px-[29px] py-[61px] flex-col gap-[145px] bg-black h-[434px] max-h-[434px] max-w-[447px] relative'>
                                 <Image
                                     src={especiality.image}
                                     alt=''
@@ -68,12 +68,12 @@ const Escecialities = () => {
                                     quality={100}
                                     className='opacity-40'
                                 />
-                                <span className='z-10 text-[2.4rem] max-w-[185px] font-light leading-[108.474%] tracking-[-0.651px]'>
-                                    {especiality.name}
-                                </span>
-                                <span className='z-10 text-[1.4rem] font-light leading-[160%] tracking-[-0.36px]'>
-                                    {especiality.text}
-                                </span>
+                                <span className='z-10 text-[2.4rem] font-light leading-[108.474%] tracking-[-0.651px]' 
+                                dangerouslySetInnerHTML={{__html: especiality.name}}
+                                />
+                                <span className='z-10 text-[1.4rem] font-light leading-[160%] tracking-[-0.36px]' 
+                                dangerouslySetInnerHTML={{__html: especiality.text}}
+                                />
                             </div>
                         )
                     })}

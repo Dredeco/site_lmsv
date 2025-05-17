@@ -5,18 +5,14 @@ import Image from 'next/image'
 
 const Team = () => {
     const team = [
-        {name: 'Bernardo Leão', OAB: '165.196 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage},
-        {name: 'Débora Moreno', OAB: '138.260 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage},
-        {name: 'Pedro Vianna', OAB: '225.511 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage},
-        {name: 'Tales Scisinio', OAB: '132.565 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage},
-        {name: 'Bernardo Leão', OAB: '165.196 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage},
-        {name: 'Débora Moreno', OAB: '138.260 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage},
-        {name: 'Pedro Vianna', OAB: '225.511 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage},
-        {name: 'Tales Scisinio', OAB: '132.565 OAB', linkedin: 'https://br.linkedin.com/', image: TeamImage}
+        {name: 'Bernardo<br /> Gomes Leão', OAB: '165.196', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'LL.M em Direito Societário pela FGV-RJ. Atua com ênfase no Contencioso Cível, Direito Empresarial, Societário e<br /> Tributário.'},
+        {name: 'Débora Claizoni<br /> Moreno de Melo', OAB: '138.260', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'Mestre e pesquisadora em História do Direito e Direito Constitucional (UFPE/<br />UFF), pós-graduanda em Direito Digital (UERJ) e membro do IBDFAM. Atua com ênfase em Direito de Família e<br /> Sucessões, Direito Empresarial e<br /> Direito Digital.'},
+        {name: 'Pedro Ramon<br /> Silvestre Vianna', OAB: '225.511', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'Mestrando em Direito Criminal (PUC-<br />RS), membro da Comissão de Estudos<br /> de Direito Penal da OAB/RJ. Atuação destacada no contencioso penal,<br /> tributário e empresarial.'},
+        {name: 'Tales<br /> Donato Scisinio', OAB: '132.565', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'Membro das Comissões de Direito<br /> Público e de Direito Urbanístico e<br /> Imobiliário da OAB/RJ. Atua com foco<br /> em Direito Administrativo, Civil<br /> e Imobiliário'},
     ]
 
     return (
-        <Container className="h-auto min-h-[446px] z-10">
+        <Container className="h-auto min-h-[446px] -mb-20 z-10">
             <div className="flex items-center gap-[8px] lg:gap-[28px] mb-[51px] relative">
                 <div className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] bg-[#9C1C37]" />
                 <span className="text-[#8e1730] text-[1.2rem] lg:text-[1.8rem]">
@@ -24,27 +20,29 @@ const Team = () => {
                 </span>
             </div>
 
-            <div className='w-full grid lg:grid-cols-2 gap-[26px] lg:gap-24'>            
+            <div className='w-full grid lg:grid-cols-2 gap-[26px] lg:gap-23'>            
                 <div className="w-full lg:max-w-[640px]">
                     <span className="text-[2.4rem] lg:text-[4.2rem] font-light leading-[50.4px] tracking-[-1.26px]">
-                        Conheça nosso time de advogados especializados.
+                        Nossos sócios
                     </span>
                 </div>
 
-                <div className="w-full lg:max-w-[640px]">
+                <div className="w-full lg:max-w-[676px]">
                     <p className="text-[1.4rem] lg:text-[1.8rem] mb-[38px] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
-                        Nossos profissionais além de experiência e especialização técnica possuem 
-                        formação multidisciplinar de tradição humanista e acadêmica. Incentivamos 
-                        nossos sócios e colaboradores a conhecerem o core business de nossos clientes. 
-                        Possuímos atuação no segmento de concessão automotiva, indústria de base, 
-                        infraestrutura, varejo de moda, indústria de moda, transportes rodoviários, 
-                        construção civil, agronegócio, energias renováveis, fundos de 
-                        investimentos, factorings, gestão pública, entre outros.
+                        Nossos sócios reúnem sólida experiência profissional, formação acadêmica de 
+                        excelência e atuação em múltiplas áreas do Direito. Com perfis complementares, 
+                        todos possuem viés humanista e uma visão multidisciplinar do Direito, o que nos 
+                        permite compreender as especificidades de cada cliente e propor soluções 
+                        personalizadas, juridicamente robustas e estrategicamente eficientes.
+                        <br /> <br />
+                        Além da formação jurídica, incentivamos o aprofundamento no core business <br />
+                        de nossos clientes, promovendo uma prática jurídica conectada com os seus 
+                        desafios reais.
                     </p>
                 </div>
             </div>
 
-            <div className='w-full grid justify-center mt-[70px] grid-cols-[repeat(auto-fit,_minmax(272px,_344px))]'>
+            <div className='w-full grid justify-center mt-[70px] gap-4 grid-cols-[repeat(auto-fit,_minmax(272px,_332px))]'>
                 {team.map((member, index): any => {
                     return (
                         <div key={index} className="w-full h-fit mb-[40px]">
@@ -53,11 +51,16 @@ const Team = () => {
                                 alt={member.name}
                                 className='bg-[#eceeed] mb-[35px]'
                             />
-                            <span className="font-semibold text-[#8e1730] text-[2.4rem] uppercase">
-                                {member.name}
+                            <span 
+                            className="w-[80%] font-semibold text-[#8e1730] text-[2.4rem] uppercase"
+                            dangerouslySetInnerHTML={{__html: member.name}}
+                            >
                             </span> 
                             <br/>
-                            <p className="mt-3 mb-2 font-light text-[2.4rem]">{member.OAB}</p>
+                            <p className="mt-3 mb-2 font-light text-[2.4rem]">OAB/RJ {member.OAB}</p>
+                            <p className="font-light mb-2 text-[1.8rem] leading-[26.03px] tracking-[-0.65px] text-[#424847]" 
+                            dangerouslySetInnerHTML={{__html: member.description}}
+                            />
                             <a href={member.linkedin}>
                                 <div data-svg-wrapper className="relative -ml-1">
                                     <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -19,14 +19,12 @@ const Service1 = () => {
                             Direito criminal
                         </span>
 
-                        <div className="w-full lg:max-w-[580px] mt-[8px] xl:mt-[26px]">
+                        <div className="w-full lg:max-w-[570px] mt-[8px] xl:mt-[26px]">
                             <p className="text-[1.4rem] lg:text-[1.8rem] mb-[24px] xl:mb-[38px] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
-                                Desenvolvemos uma advocacia artesanal no contencioso processual 
-                                penal - inquéritos, ações penais e atuação nos tribunais - e na área 
-                                consultiva com elaboração de pareceres técnicos. Possuímos 
-                                expertise em crimes tributários, matérias inerentes ao direito penal 
-                                econômico, crimes contra a honra, crimes eleitorais e crimes da 
-                                competência do Tribunal do Júri.
+                                Atuação estratégica no contencioso penal e consultivo. Expertise em 
+                                crimes tributários, crimes contra a ordem econômica, crimes 
+                                eleitorais, contra a honra e Tribunal do Júri. Defesa técnica em 
+                                inquéritos, ações penais e pareceres jurídicos.
                             </p>
                         </div>
                     </div>

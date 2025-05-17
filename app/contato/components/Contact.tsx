@@ -8,13 +8,13 @@ import LocationIcon from '@/public/contato/location.svg'
 
 const Contact = () => {
     const tecnologies = [
-        {text: '+55 (21) 98284-9948', icon: WhatsappIcon, link: 'https://api.whatsapp.com/send?phone=5521982849948'},
-        {text: 'contato@lmvadvogados.adv.br', icon: EmailIcon, link: ''},
-        {text: 'Agende agora mesmo uma reunião no ZOOM', icon: CameraIcon, link: ''},
-        {text: 'Centro Empresarial Cândido Mendes, Centro, RJ', icon: LocationIcon, link: ''},
+        {text: '<u>+55 (21) 98284-9948</u>', icon: WhatsappIcon, link: 'https://api.whatsapp.com/send?phone=5521982849948'},
+        {text: '<u>contato@lmvadvogados.adv.br</u>', icon: EmailIcon, link: ''},
+        {text: '<u>Agende agora mesmo<br /> uma reunião no ZOOM</u>', icon: CameraIcon, link: ''},
+        {text: 'Empresarial Cândido Mendes, RJ<br /> Centro Empresarial Varig, DF', icon: LocationIcon, link: ''},
     ]
     return (
-        <Container className="h-auto bg-[#FAFAFA]">
+        <Container className="h-auto">
             <div className="flex items-center gap-[8px] lg:gap-[28px] mb-[51px] relative">
                 <div className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] bg-[#9C1C37]" />
                 <span className="text-[#8e1730] text-[1.2rem] lg:text-[1.8rem]">
@@ -40,15 +40,15 @@ const Contact = () => {
                     {tecnologies.map((tecnology: any) => {
                         return (
                             <a href={tecnology.link}> 
-                                <div key={tecnology.text} className='px-[24px] flex flex-col items-center gap-12 h-auto py-[40px] text-center bg-white'>
+                                <div key={tecnology.text} className='px-[24px] flex flex-col items-center gap-12 h-auto py-[40px] text-center bg-[#FAFAFA]'>
                                     <Image 
                                         src={tecnology.icon}
                                         alt=''
                                     />
 
-                                    <span className='text-[1.4rem] lg:text-[1.8rem] leading-[160%] tracking-[-0.36px]'>
-                                        {tecnology.text}
-                                    </span>
+                                    <span className='text-[1.4rem] w-[102%] lg:text-[1.8rem] leading-[160%] tracking-[-0.36px]'
+                                    dangerouslySetInnerHTML={{__html: tecnology.text}}
+                                    />
                                 </div>
                             </a>
                         )

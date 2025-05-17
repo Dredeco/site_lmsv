@@ -6,7 +6,7 @@ import serviceImage from '@/public/servicos/service2.png'
 const Service2 = () => {
     return (
         <Container className="h-auto min-h-[446px] bg-white z-10">
-            <div className='w-full items-center grid lg:grid-cols-2 gap-[26px] lg:gap-24'>
+            <div className='w-full grid lg:grid-cols-2 gap-[26px] lg:gap-24'>
                 <Image 
                     src={serviceImage}
                     alt=''
@@ -29,17 +29,9 @@ const Service2 = () => {
 
                         <div className="w-full lg:max-w-[560px] mt-[8px] xl:mt-[26px]">
                             <p className="text-[1.4rem] lg:text-[1.8rem] mb-[24px] xl:mb-[38px] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
-                                CONSULTORIA TRIBUTÁRIA: Soluções personalizadas para redução 
-                                da carga tributária. Consultoria relacionada a tributos e 
-                                procedimentos fiscais, administração e manutenção de 
-                                contingências fiscais e regimes especiais de apuração e de 
-                                pagamento de tributos, além da estruturação de alternativas 
-                                eficientes para viabilização de negócios. <br /><br />
-
-                                CONTENCIOSO TRIBUTÁRIO: Contencioso administrativo e judicial 
-                                nas esferas federal, estadual e municipal, em todas as instâncias, 
-                                inclusive perante os tribunais superiores, assim como o patrocínio 
-                                em demandas para a recuperação de créditos.
+                                <b>Consultivo:</b> Planejamento tributário, regimes especiais, consultoria estratégica e compliance fiscal.
+                                <br /> <br />
+                                <b>Contencioso:</b> Atuação administrativa e judicial, inclusive nos Tribunais Superiores. Recuperação de créditos e defesa em autuações fiscais.
                             </p>
                         </div>
                     </div>

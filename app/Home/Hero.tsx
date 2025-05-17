@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import BackgroundImage from '@/public/Background2.png'
+import BackgroundImage from '@/public/background.png'
+import BackgroundImage2 from '@/public/background2.png'
 import Button from '../components/Button'
 import Container from '../components/Container'
 
@@ -8,14 +9,14 @@ const Hero = () => {
     return (
         <div className='!relative lg:h-[776px] w-full mx-auto max-w-[1920px]'>
             <Image 
-                className="absolute hidden lg:block top-0 right-0 min-h-full max-h-full -z-10 w-auto"
+                className="absolute hidden lg:block top-0 right-0 lg:left-[57dvw] xl:left-[46dvw] min-h-full max-h-full -z-10 w-auto"
                 src={BackgroundImage}
                 priority
                 alt=""
                 quality={100}
             />
             <Container>
-                <div className="flex flex-col lg:h-[776px] justify-center mt-[150px] lg:mt-0">
+                <div className="flex flex-col lg:h-[776px] mt-[150px] lg:mt-[93px]">
                     <h1 className="text-[3.2rem] lg:text-[5.2rem] w-full lg:max-w-[640px] font-medium leading-[120%] mb-[24px] tracking-[-0.14px]">
                         Soluções jurídicas <br />
                         e estratégicas com
