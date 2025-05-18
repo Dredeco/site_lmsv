@@ -3,6 +3,7 @@ import Image from 'next/image'
 import LogoImage from "@/public/logo-white.svg"
 import ZoomIcon from "@/public/videosvg.svg"
 import WhatsappIcon from "@/public/zapsvg.svg"
+import MediumIcon from "@/public/mediumsvg.svg"
 import FacebookIcon from "@/public/facebook.svg"
 import InstagramIcon from "@/public/instagram.svg"
 import YoutubeIcon from "@/public/youtube.svg"
@@ -62,6 +63,17 @@ const Links = () => {
                             />
                         </div>
                         <span>Fale conosco!</span>
+                    </a>
+
+                    <a href='https://medium.com/' className='flex gap-4 items-center mt-4'>
+                        <div className='w-20 h-20 border border-white border-opacity-15 flex justify-center items-center rounded-full'>
+                            <Image 
+                                src={MediumIcon}
+                                alt=''
+                                className='w-12 h-auto'
+                            />
+                        </div>
+                        <span>Fique por dentro do nosso Medium</span>
                     </a>
                 </div>
             </div>

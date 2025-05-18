@@ -18,7 +18,7 @@ const Address = () => {
         </div>
 
         <div className='w-full flex flex-wrap justify-between items-center gap-[26px] lg:gap-24'>            
-                <div className="w-full -mt-20 lg:max-w-[620px]">
+                <div className="w-full lg:-mt-20 lg:max-w-[620px]">
                     <span className="text-[2.4rem] lg:text-[4.2rem] font-light leading-[50.4px] tracking-[-1.26px]">
                         Saiba onde nos encontrar.
                     </span>

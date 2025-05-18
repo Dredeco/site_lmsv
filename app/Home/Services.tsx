@@ -10,9 +10,9 @@ import Image from 'next/image'
 
 const Services = () => {
     const carroselOptions = [
-        {name: 'Direito Criminal Empresarial', text: 'Atuação estratégica no contencioso penal e consultivo. Expertise em crimes tributários, crimes contra a ordem econômica, crimes eleitorais, contra a honra e Tribunal do Júri. Defesa técnica em inquéritos, ações penais...'},
-        {name: 'Direito tributário', text: '<b>Consultivo</b>: Planejamento tributário, regimes especiais, consultoria estratégica e compliance fiscal.<br /> <b>Contencioso</b>: Atuação administrativa e judicial, inclusive nos Tribunais Superiores. ...'},
-        {name: 'Direito Societário e Empresarial', text: '<b>M&A</b>: Estruturação e condução de operações de fusão, aquisição, cisão e reestruturação societária.<br /> <b>Consultivo Societário</b>: Atos constitutivos, reuniões societárias, planejamento e governança corporativa...'},
+        {name: 'Direito Criminal<br /> Empresarial', text: 'Atuação estratégica no contencioso penal e consultivo. Expertise em crimes tributários, crimes contra a ordem econômica, crimes eleitorais, contra a honra e Tribunal do Júri. Defesa técnica em inquéritos, ações penais...'},
+        {name: 'Direito<br /> tributário', text: '<b>Consultivo</b>: Planejamento tributário, regimes especiais, consultoria estratégica e compliance fiscal.<br /> <b>Contencioso</b>: Atuação administrativa e judicial, inclusive nos Tribunais Superiores. ...'},
+        {name: 'Direito Societário<br /> e Empresarial', text: '<b>M&A</b>: Estruturação e condução de operações de fusão, aquisição, cisão e reestruturação societária.<br /> <b>Consultivo Societário</b>: Atos constitutivos, reuniões societárias, planejamento e governança corporativa...'},
     ]
 
     return (
@@ -53,7 +53,9 @@ const Services = () => {
                 {carroselOptions.map((item: any, index: any) => {
                     return (
                     <div key={item.name} className={`carousel-item w-full max-w-[447.33px] h-[434px] flex-${index} lg:flex-1 flex flex-col justify-between relative z-10 bg-black p-9`}>
-                        <h3 className='max-w-36 text-[24px] font-light leading-[26.03px] mt-9'>{item.name}</h3>
+                        <h3 className='text-[24px] font-light leading-[26.03px] mt-9' 
+                        dangerouslySetInnerHTML={{__html: item.name}}
+                        />
                         <div className='flex flex-col gap-10 text-[1.4rem]'>
                             <span className='font-light text-[14px]' dangerouslySetInnerHTML={{__html: item.text}}></span>
                             <span className='font-medium text-[15px]'>Veja mais</span>

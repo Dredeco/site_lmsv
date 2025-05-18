@@ -59,7 +59,7 @@ const Escecialities = () => {
                 <div className='grid mt-[40px] h-auto grid-cols-[repeat(auto-fit,_minmax(272px,_447px))] gap-[16px]'>
                     {especialities.map((especiality: any) => {
                         return (
-                            <div key={especiality.name} className='w-full flex px-[29px] py-[61px] flex-col gap-[145px] bg-black h-[434px] max-h-[434px] max-w-[447px] relative'>
+                            <div key={especiality.name} className='w-full flex px-[29px] py-[61px] flex-col justify-between lg:justify-normal lg:gap-[145px] bg-black h-[434px] max-h-[434px] max-w-[447px] relative'>
                                 <Image
                                     src={especiality.image}
                                     alt=''
