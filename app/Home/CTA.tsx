@@ -17,7 +17,8 @@ const CTA = () => {
                         </h1>
                     </div>
                     <p className="text-center text-[1.4rem] xl:text-[1.8rem] text-[#222222] leading-[180%] tracking-[-0.36px]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Receba em primeira mão as novidades, publicações e atualizações juŕidicas da nossa equipe. <br />
+                        Cadastre seu e-mail e acompanhe tudo de perto.
                     </p>
                 </div>
 
