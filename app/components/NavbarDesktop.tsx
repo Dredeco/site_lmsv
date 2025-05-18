@@ -10,9 +10,9 @@ import Container from './Container'
 const NavbarDesktop = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [actualPage, setActualPage] = useState('home')
-    const isSobrePage = window.location.href.includes('sobre')
-    const isServicosPage = window.location.href.includes('servicos')
-    const isContatoPage = window.location.href.includes('contato')
+    const isSobrePage = window?.location.href.includes('sobre')
+    const isServicosPage = window?.location.href.includes('servicos')
+    const isContatoPage = window?.location.href.includes('contato')
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
