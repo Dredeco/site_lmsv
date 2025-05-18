@@ -28,7 +28,7 @@ const Form = () => {
                             <input 
                                 type='text'
                                 placeholder='Entre com seu nome'
-                                className='text-[1.6rem] py-3 px-5 focus:outline-none border min-w-[292px] mb-[11px]'
+                                className='text-[1.6rem] py-3 px-5 focus:outline-none border min-w-[292px]'
                             />
                         </div>
 
@@ -48,7 +48,7 @@ const Form = () => {
                             <input 
                                 type='text'
                                 placeholder='(21) 9999-9999'
-                                className='text-[1.6rem] py-3 px-5 focus:outline-none border min-w-[292px] mb-[11px]'
+                                className='text-[1.6rem] py-3 px-5 focus:outline-none border min-w-[292px]'
                             />
                         </div>
 
