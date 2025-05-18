@@ -7,6 +7,7 @@ import BgImage1 from '@/public/image-model-1.png'
 import BgImage2 from '@/public/image-model-2.png'
 import EllipseImage from '@/public/Ellipse 2.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Services = () => {
     const carroselOptions = [
@@ -58,7 +59,7 @@ const Services = () => {
                         />
                         <div className='flex flex-col gap-10 text-[1.4rem]'>
                             <span className='font-light text-[14px]' dangerouslySetInnerHTML={{__html: item.text}}></span>
-                            <span className='font-medium text-[15px]'>Veja mais</span>
+                            <Link className='font-medium text-[15px]' href='/servicos'>Veja mais</Link>
                         </div>
 
                         <Image 
