@@ -10,9 +10,9 @@ import Container from './Container'
 const NavbarDesktop = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [actualPage, setActualPage] = useState('home')
-    const isSobrePage = location.href.includes('sobre')
-    const isServicosPage = location.href.includes('servicos')
-    const isContatoPage = location.href.includes('contato')
+    const [isContatoPage, setIsContatoPage] = useState(
+        typeof window !== "undefined" ? window.location.href.includes('servicos') : false,
+    );
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -30,6 +30,9 @@ const NavbarDesktop = () => {
     }, []);
 
     useEffect(() => {
+        const isSobrePage = window.location.href.includes('sobre')
+        const isServicosPage = window.location.href.includes('servicos')
+
         if(isSobrePage) {
             setActualPage('sobre')
         } else if (isServicosPage) {
