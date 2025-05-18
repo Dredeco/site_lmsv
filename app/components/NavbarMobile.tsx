@@ -11,9 +11,9 @@ const NavbarMobile = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [actualPage, setActualPage] = useState('home')
     const [isOpen, setisOpen] = useState(false)
-    const isContatoPage = window?.location.href.includes('contato')
-    const isSobrePage = window?.location.href.includes('sobre')
-    const isServicosPage = window?.location.href.includes('servicos')
+    const isContatoPage = location.href.includes('contato')
+    const isSobrePage = location.href.includes('sobre')
+    const isServicosPage = location.href.includes('servicos')
 
 
     const handleScroll = () => {
