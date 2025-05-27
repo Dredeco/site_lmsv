@@ -56,16 +56,16 @@ const Escecialities = () => {
                     Outras áreas de atuação
                 </span>
 
-                <div className='grid mt-[40px] h-auto grid-cols-[repeat(auto-fit,_minmax(272px,_447px))] gap-[16px]'>
+                <div className='grid mt-[40px] grid-cols-[repeat(auto-fit,_minmax(272px,_447px))] gap-[16px]'>
                     {especialities.map((especiality: any) => {
                         return (
-                            <div key={especiality.name} className='w-full flex px-[29px] py-[61px] flex-col justify-between lg:justify-normal lg:gap-[145px] bg-black h-[434px] max-h-[434px] max-w-[447px] relative'>
+                            <div key={especiality.name} className='flex px-[29px] py-[61px] flex-col justify-between lg:justify-normal lg:gap-[145px] bg-black max-h-[433px] relative'>
                                 <Image
                                     src={especiality.image}
                                     alt=''
                                     priority
                                     fill
-                                    quality={100}
+                                    objectFit='contain'
                                     className='opacity-40'
                                 />
                                 <span className='z-10 text-[2.4rem] font-light leading-[108.474%] tracking-[-0.651px]' 

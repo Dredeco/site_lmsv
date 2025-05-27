@@ -34,27 +34,18 @@ const Links = () => {
                 </a>
             </div>
 
-            <div className='grid md:grid-cols-2 gap-6'>
+            <div className='grid md:grid-cols-3'>
                 <div className='flex flex-col'>
                     <span>CONTATO</span>
                     <span className='w-[232px] mt-[24px] mb-[50px]'>
                         +55 (21) 98284-9948<br />
-                        contato@lmvadvogados.adv.br<br />
+                        contato@lmsvadvogados.com.br<br />
                         Centro Empresarial <br />
                         Cândido Mendes, Centro, RJ
                     </span>
                 </div>
-                <div className='flex flex-col w-full'>
-                    <a href='/contato' className='flex items-center gap-4'>
-                        <div className='w-20 h-20 border border-white border-opacity-15 flex justify-center items-center rounded-full'>
-                            <Image 
-                                src={ZoomIcon}
-                                alt=''
-                            />
-                        </div>
-                        <span>Reunião virtual através do Zoom™</span>
-                    </a>
 
+                <div className='flex flex-col w-full'>
                     <a href='https://api.whatsapp.com/send?phone=5521982849948' className='flex gap-4 items-center mt-4'>
                         <div className='w-20 h-20 border border-white border-opacity-15 flex justify-center items-center rounded-full'>
                             <Image 

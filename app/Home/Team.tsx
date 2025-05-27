@@ -5,28 +5,22 @@ import React, { useState } from 'react'
 import TeamImage from '@/public/perfil.png'
 import Button from '../components/Button'
 import Container from '../components/Container'
+import Link from 'next/link'
+import ImagePedro from '@/public/pedro.png'
+import ImageDebora from '@/public/debora.png'
+import ImageTales from '@/public/tales.png'
 
 const Team = () => {
     const team = [
-        {name: 'Bernardo <br />Gomes Leão', OAB: 'OAB/RJ 165.196', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Débora Claizoni Moreno de Melo', OAB: 'OAB/RJ 229.132', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Pedro Ramon Silvestre Vianna', OAB: 'OAB/RJ 225.511', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Tales <br />Donato Scisinio', OAB: 'OAB/RJ 132.565', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Bernardo Leão', OAB: '165.196 OAB', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Débora Moreno', OAB: '138.260 OAB', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Pedro Vianna', OAB: '225.511 OAB', linkedin: 'https://br.linkedin.com/'},
-        {name: 'Tales Scisinio', OAB: '132.565 OAB', linkedin: 'https://br.linkedin.com/'}
+        {name: 'Bernardo <br />Gomes Leão', OAB: 'OAB/RJ 165.196', linkedin: 'https://br.linkedin.com/', image: TeamImage},
+        {name: 'Débora Claizoni Moreno de Melo', OAB: 'OAB/RJ 229.132', linkedin: 'https://www.linkedin.com/in/deboraclaizoni?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', image: ImageDebora},
+        {name: 'Pedro Ramon Silvestre Vianna', OAB: 'OAB/RJ 225.511', linkedin: 'https://www.linkedin.com/in/pedro-vianna-95347118b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', image: ImagePedro},
+        {name: 'Tales <br />Donato Scisinio', OAB: 'OAB/RJ 132.565', linkedin: 'https://br.linkedin.com/', image: ImageTales}
     ]
-    const [limit, setLimit] = useState(4)
-    const [showAll, setShowAll] = useState(false);
-
-    const handleToggle = () => {
-        setShowAll(!showAll);
-    };
 
     return (
         <Container className="">
-            <div className="flex items-center gap-7">
+            <div className="flex items-center gap-[28px]">
                 <div className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] bg-[#9C1C37]" />
                 <span className="text-[#8e1730] text-[1.2rem] lg:text-[1.8rem]">
                     Especialistas jurídicos
@@ -43,13 +37,17 @@ const Team = () => {
 
             <div className="flex flex-col items-center w-full mt-[34px] lg:mt-[50px] h-fit">
             <div className='w-full grid justify-center grid-cols-[repeat(auto-fit,_minmax(272px,_344px))]'>
-            {team.slice(0, showAll ? team.length : limit).map((member, index) => (
+            {team.map((member, index) => (
                     <div key={index} className="w-full flex flex-col h-fit mb-[40px]">
+                        <div className='relative mb-[35px] h-[402px] w-[332px]'>
                         <Image 
-                            src={TeamImage}
+                            src={member.image}
                             alt={member.name}
-                            className='bg-[#eceeed] mb-[35px]'
+                            fill
+                            objectFit='cover'
+                            objectPosition='top'
                         />
+                        </div>
 
                         <div className='w-full flex flex-col gap-3 px-[10px]'>
                             <span 
@@ -69,7 +67,9 @@ const Team = () => {
                     </div>
                     ))}
             </div>
-            <Button variant="default" text={showAll ? "Ver Menos" : "Veja Mais"} onClick={handleToggle} />
+            <Link href="/sobre" >
+                <Button variant="default" text={"Veja Mais"} />
+            </Link>
             </div>
 
         </Container>

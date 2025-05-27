@@ -2,13 +2,16 @@ import Container from '@/app/components/Container'
 import React from 'react'
 import TeamImage from '@/public/perfil.png'
 import Image from 'next/image'
+import ImagePedro from '@/public/pedro.png'
+import ImageDebora from '@/public/debora.png'
+import ImageTales from '@/public/tales.png'
 
 const Team = () => {
     const team = [
         {name: 'Bernardo<br /> Gomes Leão', OAB: '165.196', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'LL.M em Direito Societário pela FGV-RJ. Atua com ênfase no Contencioso Cível, Direito Empresarial, Societário e<br /> Tributário.'},
-        {name: 'Débora Claizoni<br /> Moreno de Melo', OAB: '138.260', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'Mestre e pesquisadora em História do Direito e Direito Constitucional (UFPE/<br />UFF), pós-graduanda em Direito Digital (UERJ) e membro do IBDFAM. Atua com ênfase em Direito de Família e<br /> Sucessões, Direito Empresarial e<br /> Direito Digital.'},
-        {name: 'Pedro Ramon<br /> Silvestre Vianna', OAB: '225.511', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'Mestrando em Direito Criminal (PUC-<br />RS), membro da Comissão de Estudos<br /> de Direito Penal da OAB/RJ. Atuação destacada no contencioso penal,<br /> tributário e empresarial.'},
-        {name: 'Tales<br /> Donato Scisinio', OAB: '132.565', linkedin: 'https://br.linkedin.com/', image: TeamImage, description: 'Membro das Comissões de Direito<br /> Público e de Direito Urbanístico e<br /> Imobiliário da OAB/RJ. Atua com foco<br /> em Direito Administrativo, Civil<br /> e Imobiliário'},
+        {name: 'Débora Claizoni<br /> Moreno de Melo', OAB: '138.260', linkedin: 'https://br.linkedin.com/', image: ImageDebora, description: 'Mestre e pesquisadora em História do Direito e Direito Constitucional (UFPE/<br />UFF), pós-graduanda em Direito Digital (UERJ) e membro do IBDFAM. Atua com ênfase em Direito de Família e<br /> Sucessões, Direito Empresarial e<br /> Direito Digital.'},
+        {name: 'Pedro Ramon<br /> Silvestre Vianna', OAB: '225.511', linkedin: 'https://br.linkedin.com/', image: ImagePedro, description: 'Mestrando em Direito Criminal (PUC-<br />RS), membro da Comissão de Estudos<br /> de Direito Penal da OAB/RJ. Atuação destacada no contencioso penal,<br /> tributário e empresarial.'},
+        {name: 'Tales<br /> Donato Scisinio', OAB: '132.565', linkedin: 'https://br.linkedin.com/', image: ImageTales, description: 'Membro das Comissões de Direito<br /> Público e de Direito Urbanístico e<br /> Imobiliário da OAB/RJ. Atua com foco<br /> em Direito Administrativo, Civil<br /> e Imobiliário'},
     ]
 
     return (
@@ -46,11 +49,15 @@ const Team = () => {
                 {team.map((member, index): any => {
                     return (
                         <div key={index} className="w-full h-fit mb-[40px]">
+                            <div className='relative mb-[35px] h-[402px] w-[330px]'>
                             <Image 
-                                src={TeamImage}
+                                src={member.image}
                                 alt={member.name}
-                                className='bg-[#eceeed] mb-[35px]'
+                                fill
+                                objectFit='cover'
+                                objectPosition='top'
                             />
+                            </div>
                             <span 
                             className="w-[80%] font-semibold text-[#8e1730] text-[2.4rem] uppercase"
                             dangerouslySetInnerHTML={{__html: member.name}}
