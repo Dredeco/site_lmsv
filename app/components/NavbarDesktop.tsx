@@ -6,10 +6,12 @@ import LogoImage from "@/public/logo.svg"
 import Link from 'next/link'
 import Button from './Button'
 import Container from './Container'
+import { usePathname } from 'next/navigation'
 
 const NavbarDesktop = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [actualPage, setActualPage] = useState('home')
+    const pathname = usePathname()
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -27,9 +29,9 @@ const NavbarDesktop = () => {
     }, []);
 
     useEffect(() => {
-        const isSobrePage = window.location.href.includes('sobre')
-        const isServicosPage = window.location.href.includes('servicos')
-        const isContatoPage = window.location.href.includes('contato')
+        const isSobrePage = pathname.includes('sobre')
+        const isServicosPage = pathname.includes('servicos')
+        const isContatoPage = pathname.includes('contato')
 
         if(isSobrePage) {
             setActualPage('sobre')
@@ -40,7 +42,7 @@ const NavbarDesktop = () => {
         } else {
             setActualPage('home')
         }
-    }, [window.location.href, setActualPage])
+    }, [pathname, setActualPage])
 
     return (
         <Container 
