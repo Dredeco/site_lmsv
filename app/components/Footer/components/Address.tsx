@@ -27,7 +27,7 @@ const Address = () => {
                 <div className="w-full lg:max-w-[711px] flex-1">
                     <p className="text-[1.4rem] lg:text-[1.8rem] tracking-[-0.36px] text-[#424847] font-normal flex-1 leading-[160%]">
                         Com escritórios no Rio de Janeiro, desenvolvemos alianças estratégicas com outros 
-                        escritórios de modo a suplementar/complementar nosso expertise <br />
+                        escritórios de modo a suplementar/complementar nosso expertise
                         para atendimento de demandas específicas de nossos clientes.
                     </p>
                 </div>

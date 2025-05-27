@@ -20,7 +20,7 @@ const Team = () => {
 
     return (
         <Container className="">
-            <div className="flex items-center gap-[28px]">
+            <div className="flex items-center gap-[8px] lg:gap-[28px]">
                 <div className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] bg-[#9C1C37]" />
                 <span className="text-[#8e1730] text-[1.2rem] lg:text-[1.8rem]">
                     Especialistas jurídicos
@@ -67,7 +67,7 @@ const Team = () => {
                     </div>
                     ))}
             </div>
-            <Link href="/sobre" >
+            <Link href="/sobre" className='w-full flex justify-center'>
                 <Button variant="default" text={"Veja Mais"} />
             </Link>
             </div>
