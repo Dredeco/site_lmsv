@@ -3,25 +3,35 @@
 @tailwind utilities;
 
 * {
-  font-family: var(--font-inter);
+	font-family: var(--font-inter);
 }
 
 html {
-  font-size: 62.5%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .carousel-item {
-  transition: background-color 0.3s ease, color 0.3s ease;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.carousel-item:hover, .carousel-item:focus, .carousel-item:active {
-  background-color: white; /* Fundo branco no hover */
-  color: #8E1730; /* Letras vermelhas no hover */
+.carousel-description {
+	b {
+		font-weight: 500;
+	}
 }
 
-.carousel-item:hover > img, .carousel-item:focus > img, .carousel-item:active > img {
-  opacity: 0 !important;
+.carousel-item:hover,
+.carousel-item:focus,
+.carousel-item:active {
+	background-color: white; /* Fundo branco no hover */
+	color: #8e1730; /* Letras vermelhas no hover */
+}
+
+.carousel-item:hover > img,
+.carousel-item:focus > img,
+.carousel-item:active > img {
+	opacity: 0 !important;
 }

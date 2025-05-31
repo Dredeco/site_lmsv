@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
 import Image from "next/image";
-import TeamImage from '@/public/perfil.png'
-import Navbar from "./components/NavbarDesktop";
+import TeamImage from "@/public/perfil.png";
+import Navbar from "./components/Navbar/NavbarDesktop";
 import Button from "./components/Button";
-import EllipseImage from '@/public/Ellipse 2.png'
+import EllipseImage from "@/public/Ellipse 2.png";
 import Hero from "./Home/Hero";
 import About from "./Home/About";
 import Services from "./Home/Services";
@@ -15,11 +15,9 @@ import Comments from "./Home/Comments";
 import Footer from "./components/Footer";
 
 export default function Home() {
-  
   return (
     <div className="flex min-h-screen w-full justify-center relative">
       <main className="overflow-x-hidden w-full">
-
         {/* -------------- HOME ------------------- */}
         <Hero />
 
