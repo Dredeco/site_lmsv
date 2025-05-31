@@ -145,7 +145,9 @@ const Services = () => {
 									</div>
 									<Image
 										src={item.image}
-										alt=""
+										alt={item.name}
+										priority
+										quality={100}
 										className="absolute top-0 left-0 -z-10 opacity-25"
 									/>
 								</div>
