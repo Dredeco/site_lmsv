@@ -10,7 +10,6 @@ import { usePathname } from 'next/navigation';
 
 const NavbarMobile = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [actualPage, setActualPage] = useState('home');
 	const [isOpen, setisOpen] = useState(false);
 	const pathname = usePathname();
 
@@ -35,22 +34,15 @@ const NavbarMobile = () => {
 		};
 	}, [handleScroll]);
 
-	useEffect(() => {
-		if (pathname.includes('sobre')) {
-			setActualPage('sobre');
-		} else if (pathname.includes('servicos')) {
-			setActualPage('servicos');
-		} else if (pathname.includes('contato')) {
-			setActualPage('contato');
-		} else {
-			setActualPage('home');
-		}
-	}, [pathname]);
+	const isActive = (route: string) => {
+		if (route === '/') return pathname === '/';
+		return pathname.startsWith(route);
+	};
 
 	return (
 		<Container
 			className={`flex lg:hidden fixed w-full text-[1.6rem] items-center !py-0 justify-between min-h-[115px] max-h-[115px] z-30 transition-all duration-100 ${
-				isScrolled || actualPage === 'contato'
+				isScrolled || isActive('/contato')
 					? 'bg-white shadow-lg'
 					: 'bg-transparent'
 			}`}>
@@ -69,10 +61,9 @@ const NavbarMobile = () => {
 							href="/"
 							onClick={() => {
 								setisOpen(false);
-								setActualPage('home');
 							}}
 							className={`w-auto px-[27.5px] py-[20px] text-center ${
-								actualPage === 'home' ? 'text-[#222] bg-[#fafafa]' : ''
+								isActive('/') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Home
 						</Link>
@@ -80,10 +71,9 @@ const NavbarMobile = () => {
 							href="/sobre"
 							onClick={() => {
 								setisOpen(false);
-								setActualPage('sobre');
 							}}
 							className={`w-auto px-[27.5px] py-[20px] text-center ${
-								actualPage === 'sobre' ? 'text-[#222] bg-[#fafafa]' : ''
+								isActive('/sobre') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Sobre
 						</Link>
@@ -91,10 +81,9 @@ const NavbarMobile = () => {
 							href="/servicos"
 							onClick={() => {
 								setisOpen(false);
-								setActualPage('servicos');
 							}}
 							className={`w-auto px-[27.5px] py-[20px] text-center ${
-								actualPage === 'servicos' ? 'text-[#222] bg-[#fafafa]' : ''
+								isActive('/servicos') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Serviços
 						</Link>
@@ -102,10 +91,9 @@ const NavbarMobile = () => {
 							href="/contato"
 							onClick={() => {
 								setisOpen(false);
-								setActualPage('contato');
 							}}
 							className={`w-auto px-[27.5px] py-[20px] text-center ${
-								actualPage === 'contato' ? 'text-[#222] bg-[#fafafa]' : ''
+								isActive('/contato') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Contato
 						</Link>

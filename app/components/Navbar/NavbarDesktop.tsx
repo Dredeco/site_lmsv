@@ -10,7 +10,6 @@ import { usePathname } from 'next/navigation';
 
 const NavbarDesktop = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [actualPage, setActualPage] = useState('home');
 	const pathname = usePathname();
 
 	const handleScroll = useCallback(() => {
@@ -25,29 +24,23 @@ const NavbarDesktop = () => {
 		// Evita problemas em SSR
 		if (typeof window === 'undefined') return;
 		window.addEventListener('scroll', handleScroll);
+		handleScroll();
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, [handleScroll]);
 
-	useEffect(() => {
-		if (pathname.includes('sobre')) {
-			setActualPage('sobre');
-		} else if (pathname.includes('servicos')) {
-			setActualPage('servicos');
-		} else if (pathname.includes('contato')) {
-			setActualPage('contato');
-		} else {
-			setActualPage('home');
-		}
-	}, [pathname]);
+	const isActive = (route: string) => {
+		if (route === '/') return pathname === '/';
+		return pathname.startsWith(route);
+	};
 
 	return (
 		<Container
 			className={`hidden lg:flex fixed w-full h-fit text-[1.6rem] 
                 items-center !py-0 justify-between min-h-[112px] max-h-[112px] 
                 z-30 transition-all duration-100 ${
-									isScrolled || pathname.includes('contato')
+									isScrolled || isActive('/contato')
 										? 'bg-white shadow-lg'
 										: 'bg-transparent'
 								}`}>
@@ -60,45 +53,43 @@ const NavbarDesktop = () => {
 					<div className="hidden md:flex space-x-4 ml-[107px] text-[#757575]">
 						<Link
 							href="/"
-							onClick={() => setActualPage('home')}
-							className={`w-auto px-[27.5px] py-[10px] text-center ${
-								actualPage === 'home' ? 'text-[#222] bg-[#fafafa]' : ''
+							className={`w-auto px-[27.5px] py-[10px] text-center hover:font-semibold ${
+								isActive('/') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Home
 						</Link>
 						<Link
 							href="/sobre"
-							onClick={() => setActualPage('sobre')}
-							className={`w-auto px-[27.5px] py-[10px] text-center ${
-								actualPage === 'sobre' ? 'text-[#222] bg-[#fafafa]' : ''
+							className={`w-auto px-[27.5px] py-[10px] text-center hover:font-semibold ${
+								isActive('/sobre') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Sobre
 						</Link>
 						<Link
 							href="/servicos"
-							onClick={() => setActualPage('servicos')}
-							className={`w-auto px-[27.5px] py-[10px] text-center ${
-								actualPage === 'servicos' ? 'text-[#222] bg-[#fafafa]' : ''
+							className={`w-auto px-[27.5px] py-[10px] text-center hover:font-semibold ${
+								isActive('/servicos') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Serviços
 						</Link>
 						<Link
 							href="/contato"
-							onClick={() => setActualPage('contato')}
-							className={`w-auto px-[27.5px] py-[10px] text-center ${
-								actualPage === 'contato' ? 'text-[#222] bg-[#fafafa]' : ''
+							className={`w-auto px-[27.5px] py-[10px] text-center hover:font-semibold ${
+								isActive('/contato') ? 'text-[#222] bg-[#fafafa]' : ''
 							}`}>
 							Contato
 						</Link>
 					</div>
 				</div>
 				<div className="hidden md:block">
-					<Button
-						variant={`${
-							!isScrolled && actualPage === 'home' ? 'alternative' : 'default'
-						}`}
-						text="Entre em contato"
-					/>
+					<Link href="/contato">
+						<Button
+							variant={`${
+								!isScrolled && isActive('/') ? 'alternative' : 'default'
+							}`}
+							text="Entre em contato"
+						/>
+					</Link>
 				</div>
 			</nav>
 		</Container>

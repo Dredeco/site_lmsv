@@ -1,41 +1,32 @@
-"use client";
-
-import Image from "next/image";
-import TeamImage from "@/public/perfil.png";
-import Navbar from "./components/Navbar/NavbarDesktop";
-import Button from "./components/Button";
-import EllipseImage from "@/public/Ellipse 2.png";
-import Hero from "./Home/Hero";
-import About from "./Home/About";
-import Services from "./Home/Services";
-import CTA from "./Home/CTA";
-import { useState } from "react";
-import Team from "./Home/Team";
-import Comments from "./Home/Comments";
-import Footer from "./components/Footer";
+import Hero from './Home/Hero';
+import About from './Home/About';
+import Services from './Home/Services';
+import CTA from './Home/CTA';
+import Team from './Home/Team';
+import Footer from './components/Footer';
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen w-full justify-center relative">
-      <main className="overflow-x-hidden w-full">
-        {/* -------------- HOME ------------------- */}
-        <Hero />
+	return (
+		<div className="flex min-h-screen w-full justify-center relative">
+			<main className="overflow-x-hidden w-full">
+				{/* -------------- HOME ------------------- */}
+				<Hero />
 
-        {/* ---------- SOBRE ------------ */}
-        <About />
+				{/* ---------- SOBRE ------------ */}
+				<About />
 
-        {/* ------------ SERVIÇOS -------------- */}
-        <Services />
+				{/* ------------ SERVIÇOS -------------- */}
+				<Services />
 
-        {/* ------------ CTA ----------------- */}
-        <CTA />
+				{/* ------------ CTA ----------------- */}
+				<CTA />
 
-        {/* ------------ TIME ----------------- */}
-        <Team />
+				{/* ------------ TIME ----------------- */}
+				<Team />
 
-        {/* FOOTER */}
-        <Footer />
-      </main>
-    </div>
-  );
+				{/* FOOTER */}
+				<Footer />
+			</main>
+		</div>
+	);
 }

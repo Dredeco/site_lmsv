@@ -6,7 +6,8 @@
 	font-family: var(--font-inter);
 }
 
-html {
+html,
+body {
 	font-size: 62.5%;
 	margin: 0;
 	padding: 0;
@@ -23,15 +24,11 @@ html {
 	}
 }
 
-.carousel-item:hover,
-.carousel-item:focus,
-.carousel-item:active {
+.carousel-item:hover {
 	background-color: white; /* Fundo branco no hover */
 	color: #8e1730; /* Letras vermelhas no hover */
 }
 
-.carousel-item:hover > img,
-.carousel-item:focus > img,
-.carousel-item:active > img {
+.carousel-item:hover > img {
 	opacity: 0 !important;
 }

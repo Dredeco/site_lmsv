@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -41,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			type={rest.type || 'button'}
-			className="w-full lg:w-[216px] px-[16px] py-[10px] text-[1.5rem] tracking-[-0.15px] text-center block"
+			className="w-full lg:w-[216px] px-[16px] py-[10px] text-[1.5rem] tracking-[-0.15px] text-center block active:scale-[0.95]"
 			style={{
 				backgroundColor: isHovered
 					? currentStyle.hover?.backgroundColor || currentStyle.backgroundColor

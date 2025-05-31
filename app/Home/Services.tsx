@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import RightArrowButton from '../components/RightArrowButton';
@@ -35,7 +37,7 @@ const Services = () => {
 		},
 		{
 			name: 'Direito Civil<br /> e Processual',
-			text: '<b>Contratos:</b> Elaboração e revisão de instrumentos civis e comerciais.<br /> <b>Imobiliário:</b> Assessoria em operações imobiliárias, financiamento, incorporações, loteamentos e auditoria jurídica....',
+			text: '<b>Contratos:</b> Elaboração e revisão de instrumentos civis<br /> e comerciais.<br /> <b>Imobiliário:</b> Assessoria em operações imobiliárias, financiamento, incorporações, loteamentos e auditoria jurídica....',
 			image: especiality1,
 		},
 		{
@@ -113,12 +115,14 @@ const Services = () => {
 						<button
 							onClick={handlePrev}
 							disabled={!canGoLeft}
+							className="active:scale-[0.95]"
 							aria-label="Anterior">
 							<LeftArrowButton />
 						</button>
 						<button
 							onClick={handleNext}
 							disabled={!canGoRight}
+							className="active:scale-[0.95]"
 							aria-label="Próximo">
 							<RightArrowButton />
 						</button>
@@ -136,7 +140,7 @@ const Services = () => {
 										dangerouslySetInnerHTML={{ __html: item.name }}
 									/>
 									<span
-										className="flex-1 font-light text-[1.4rem] leading-[160%] tracking-[-0.36px] carousel-description"
+										className="flex-1 font-light text-[1.4rem] leading-[160%] w-[94%] lg:w-full tracking-[-0.36px] carousel-description"
 										dangerouslySetInnerHTML={{ __html: item.text }}
 									/>
 
@@ -149,8 +153,9 @@ const Services = () => {
 										src={item.image}
 										alt={item.name}
 										priority
+										fill
 										quality={100}
-										className="absolute top-0 left-0 -z-10 opacity-25"
+										className="-z-10 opacity-25"
 									/>
 								</div>
 							))}
