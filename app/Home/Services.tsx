@@ -35,17 +35,17 @@ const Services = () => {
 		},
 		{
 			name: 'Direito Civil<br /> e Processual',
-			text: '<b>Contratos:</b> Elaboração e revisão de instrumentos civis e comerciais.<br /> <b>Imobiliário:</b> Assessoria em operações imobiliárias, financiamento, incorporações, loteamentos e auditoria jurídica. Consumidor: Consultoria e defesa em relações de consumo e gestão de passivo consumerista.',
+			text: '<b>Contratos:</b> Elaboração e revisão de instrumentos civis e comerciais.<br /> <b>Imobiliário:</b> Assessoria em operações imobiliárias, financiamento, incorporações, loteamentos e auditoria jurídica....',
 			image: especiality1,
 		},
 		{
 			name: 'Direito de Família<br /> e Sucessório',
-			text: '<b>Planejamento Patrimonial e Sucessório:</b> Estruturação de holdings e testamentos.<br /> <b>Atuação Judicial e Extrajudicial:</b> Adoção, inventário, divórcio, partilha, curatela e parentalidade.<br /> <b>Mediação Familiar:</b> Soluções consensuais com sensibilidade e técnica.',
+			text: '<b>Planejamento Patrimonial e Sucessório:</b> Estruturação de holdings e testamentos.<br /> <b>Atuação Judicial e Extrajudicial:</b> Adoção, inventário, divórcio, partilha, curatela e parentalidade...',
 			image: especiality2,
 		},
 		{
 			name: 'Direito<br /> Trabalhista',
-			text: '<b>Contencioso:</b> Defesa em ações individuais e coletivas, estratégias preventivas e gestão de risco.<br /> <b>Consultivo:</b> Suporte ao RH, contratos, compliance trabalhista e terceirização.',
+			text: '<b>Contencioso:</b> Defesa em ações individuais e coletivas, estratégias preventivas e gestão de risco.<br /> <b>Consultivo:</b> Suporte ao RH, contratos, compliance trabalhista e terceirização....',
 			image: especiality3,
 		},
 		{
@@ -55,12 +55,12 @@ const Services = () => {
 		},
 		{
 			name: 'Direito Digital<br /> e Propriedade Intelectual',
-			text: '<b>Consultivo:</b> Adequação à LGPD, políticas de privacidade, contratos tecnológicos e compliance digital.<br /> <b>Contencioso:</b> Disputas sobre marcas, registros, remoção de conteúdo e violação de direitos autorais.',
+			text: '<b>Consultivo:</b> Adequação à LGPD, políticas de privacidade, contratos tecnológicos e compliance digital.<br /> <b>Contencioso:</b> Disputas sobre marcas, registros, remoção de conteúdo e violação de direitos autorais....',
 			image: especiality5,
 		},
 		{
 			name: 'Direito<br /> Imobiliário',
-			text: 'Oferecemos suporte completo em transações imobiliárias, estruturação de empreendimentos, contratos de compra e venda, locações, incorporações e auditorias jurídicas. Atuamos desde a análise jurídica de riscos até a execução de estratégias eficazes de viabilização de negócios no setor imobiliário.',
+			text: 'Oferecemos suporte completo em transações imobiliárias, estruturação de empreendimentos, contratos de compra e venda, locações, incorporações e auditorias jurídicas. Atuamos desde a análise jurídica de riscos até a execução de estratégi...',
 			image: especiality6,
 		},
 	];
@@ -130,19 +130,21 @@ const Services = () => {
 								<div
 									key={item.name}
 									className={`carousel-item w-full max-w-[447.33px] h-[434px] 
-									lg:flex-1 flex flex-col relative z-10 bg-black p-9 gap-[145px]`}>
+									lg:flex-1 flex flex-col relative z-10 bg-black p-9 justify-between`}>
 									<h3
-										className="text-[24px] font-light leading-[26.03px] mt-9"
+										className="flex-auto text-[24px] font-light leading-[26.03px] mt-9"
 										dangerouslySetInnerHTML={{ __html: item.name }}
 									/>
-									<div className="flex flex-col gap-10 text-[1.4rem]">
-										<span
-											className="font-light text-[14px] leading-[160%] tracking-[-0.36px] carousel-description"
-											dangerouslySetInnerHTML={{ __html: item.text }}></span>
-										<Link className="font-medium text-[15px]" href="/servicos">
-											Veja mais
-										</Link>
-									</div>
+									<span
+										className="flex-1 font-light text-[1.4rem] leading-[160%] tracking-[-0.36px] carousel-description"
+										dangerouslySetInnerHTML={{ __html: item.text }}
+									/>
+
+									<Link
+										className="self-baseline font-medium text-[1.5rem]"
+										href="/servicos">
+										Veja mais
+									</Link>
 									<Image
 										src={item.image}
 										alt={item.name}
